@@ -10,3 +10,11 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+  install-npm-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > .npmrc
+    - name: Install Dependencies
+      run: npm ci
