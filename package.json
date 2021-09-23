@@ -1,0 +1,23 @@
+{
+  "name": "gh-actions-playground",
+  "version": "1.0.0",
+  "description": "Testing out GH actions configurations before implementing in repos that matter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srimronsoutter/gh-actions-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srimronsoutter/gh-actions-playground/issues"
+  },
+  "homepage": "https://github.com/srimronsoutter/gh-actions-playground#readme",
+  "dependencies": {
+    "@stvgroup/player-api": "^3.3.3",
+    "vast": "^1.0.2"
+  }
+}
