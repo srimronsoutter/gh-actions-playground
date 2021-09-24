@@ -16,4 +16,4 @@ jobs:
         run: npm run test:ci
       - name: failed
         if ${{ success() }}
-        run: echo "boo"
+          run: echo "boo"
