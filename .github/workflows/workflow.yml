@@ -15,5 +15,5 @@ jobs:
       - name: Run tests
         run: npm run test:ci
       - name: failed
-        if ${{ success() }}
-          run: echo "boo"
+        if: success()
+        run: echo "boo"
