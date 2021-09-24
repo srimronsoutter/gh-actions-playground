@@ -19,13 +19,11 @@ jobs:
         run: npm run test:ci
       - name: success label
         if: success()
-        uses: andymckay/labeler@master
+        uses: actions-ecosystem/action-add-labels@v1
         with:
-          add-labels: "success"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: success
       - name: fail label
         if: failure()
-        uses: andymckay/labeler@master
+        uses: actions-ecosystem/action-add-labels@v1
         with:
-          add-labels: "failure"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: failure
