@@ -19,7 +19,7 @@ jobs:
         run: npm run test:ci
       - name: success label
         if: success()
-        uses: aactions/labeler@v2
+        uses: actions/labeler@v2
         with:
           add-labels: "success"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
