@@ -27,8 +27,13 @@ jobs:
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: failure
-      - name: fail label
+      - name: add fail label
         if: failure()
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: failure
+      - name: remove success label
+        if: failure()
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          labels: success
