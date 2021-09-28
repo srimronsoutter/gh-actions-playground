@@ -17,11 +17,13 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm run test:ci
-      - name: success label
+      - name: add success label
         if: success()
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: success
+      - name: remove failure label
+        if: success()
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: failure
